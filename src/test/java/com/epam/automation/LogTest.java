@@ -1,7 +1,9 @@
 package com.epam.automation;
 
+import junit.framework.Assert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -20,5 +22,14 @@ public class LogTest {
         logger.warn("Warn message");
         logger.fatal("Fatal message");
 
+    }
+
+    @Test
+    @Ignore
+    public void ignoredTest(){}
+
+    @Test
+    public void oneCAnFail(){
+        Assert.fail();
     }
 }
